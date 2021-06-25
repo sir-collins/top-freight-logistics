@@ -141,7 +141,7 @@ export default {
    this.center = { lat:-1.29631028162482, lng: 36.77500534205996}
 
     let interval1 = window.setInterval(() => {  
-      if(count === 5){
+      if(count === 20){
         this.showChangeFreight = false
         this.changeDriver();
         clearInterval(interval1)
@@ -153,7 +153,7 @@ export default {
   changeDriver(){
     let count = 0
     let interval2 = window.setInterval(() => {  
-          if(count === 5){
+          if(count === 10){
             this.driverInfo = "Driver B";
             this.freightPosition = { lat:-1.291879, lng: 36.778389};
             this.showChangeFreight = true
@@ -178,7 +178,9 @@ export default {
     }, 1000);
     
   }   ,
-   reset(){}
+   reset(){
+    location.reload();
+   }
 }
 }
 
